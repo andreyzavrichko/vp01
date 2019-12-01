@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 01 2019 г., 19:38
+-- Время создания: Дек 01 2019 г., 19:43
 -- Версия сервера: 5.6.43
 -- Версия PHP: 7.2.22
 
@@ -44,7 +44,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`order_id`, `buyer`, `delivery_address`, `comment`, `payment`, `callback`) VALUES
 (36, 17, ' street : Петровская, home : 5', NULL, NULL, NULL),
 (37, 18, ' street : Коммунистическая, home : 8', NULL, NULL, NULL),
-(38, 19, ' street : Ленина, home : 6', NULL, NULL, NULL);
+(38, 19, ' street : Ленина, home : 6', NULL, NULL, NULL),
+(39, 20, ' street : Ленина, home : 8, part : 1, appt : 94, floor : 8', 'Test', 'on', 'on');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `email`, `name`, `phone`) VALUES
 (17, 'vasya@mail.ru', 'vasya', '+7 (888) 888 88 88'),
 (18, 'masha@gmail.com', 'Masha', '+7 (777) 777 77 77'),
-(19, 'lena@rambler.ru', 'Lena', '+7 (444) 444 44 44');
+(19, 'lena@rambler.ru', 'Lena', '+7 (444) 444 44 44'),
+(20, 'andrey@gmail.com', 'Andrey', '+7 (899) 454 21 13');
 
 --
 -- Индексы сохранённых таблиц
@@ -92,13 +94,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
